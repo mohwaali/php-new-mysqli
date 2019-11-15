@@ -27,7 +27,7 @@ class Model extends DatabaseConnect{
             
              $key =  "`".implode("`,`", $key ). "`" ;
              $val = "'". implode("','", $val ) . "'";
-             $val =  htmlentities( $val  ) ;
+             $val =  htmlentities($val) ;
 
             $resulte = $this->mysqli->query(" INSERT INTO `$table` ($key) VALUES ($val) " );
          
